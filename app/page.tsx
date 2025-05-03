@@ -1,31 +1,16 @@
-import FeatureCard from "../components/FeatureCard";
+"use client";
 
-export default function HomePage() {
+import FileUploader from "../components/FileUploader";
+
+export default function UploadPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="px-6 py-20 text-center bg-blue-50">
-        <h1 className="text-4xl font-bold text-blue-700">
-          Extract Intelligence from Documents — Fast
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      <div className="max-w-3xl w-full bg-white rounded-2xl shadow-xl p-8">
+        <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">
+          Upload Documents
         </h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Analyze millions of files using AI.
-        </p>
-      </section>
-
-      <section className="grid md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto">
-        <FeatureCard
-          title="Fast Processing"
-          description="Blazing-speed extraction from massive data."
-        />
-        <FeatureCard
-          title="Structured Results"
-          description="Extract clean tables, text, and metadata."
-        />
-        <FeatureCard
-          title="Open API Access"
-          description="Easily integrate into your systems."
-        />
-      </section>
+        <FileUploader />
+      </div>
     </div>
   );
 }
